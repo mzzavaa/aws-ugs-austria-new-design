@@ -1,0 +1,40 @@
+baseURL = 'https://aws-usergroups-austria.org/'
+languageCode = 'en-us'
+title = 'AWS User Groups Austria'
+
+[params]
+  description = "AWS User Groups Austria - A community for AWS enthusiasts in Austria"
+  # Social media links
+  linkedin = "https://www.linkedin.com/company/aws-user-group-vienna/"
+  meetup = "https://www.meetup.com/aws-womens-user-group-vienna/"
+  email = "linda.mohamed@icloud.com"
+  github = "https://github.com/aws-user-group-vienna"
+
+[build]
+  writeStats = true # Enable for Tailwind PurgeCSS
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/#about"
+    weight = 2
+  [[menu.main]]
+    name = "Events"
+    url = "/#events"
+    weight = 3
+  [[menu.main]]
+    name = "Sponsors"
+    url = "/#sponsors"
+    weight = 4
+  [[menu.main]]
+    name = "Contact"
+    url = "/#contact"
+    weight = 5
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true

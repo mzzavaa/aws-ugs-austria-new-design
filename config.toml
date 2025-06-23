@@ -1,0 +1,45 @@
+baseURL = "https://aws-user-groups-austria.com/"
+languageCode = "en-us"
+title = "AWS User Groups Austria"
+theme = "aws-ugs-theme"
+
+[params]
+  description = "A community for AWS enthusiasts and professionals in Austria"
+  images = ["images/og-image.png"]
+  
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Events"
+    url = "#events"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "#about"
+    weight = 3
+  images = ["images/og-image.png"]
+  
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Communities"
+    url = "#communities"
+    weight = 2
+  [[menu.main]]
+    name = "Events"
+    url = "#events"
+    weight = 3
+  [[menu.main]]
+    name = "Submit Community"
+    url = "/submit"
+    weight = 4
+  [[menu.main]]
+    name = "About"
+    url = "#about"
+    weight = 5

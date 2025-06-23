@@ -1,0 +1,197 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="py-24 md:py-36 relative">
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center mb-12">
+      <h1 class="text-5xl md:text-7xl font-bold mb-4 text-glow gradient-text">AWS User Groups Austria</h1>
+      <p class="text-xl mb-6">A community for AWS enthusiasts in Austria</p>
+      <div class="w-24 h-1 mx-auto bg-gradient-to-r from-[#6f42c1] via-[#0070f3] to-[#00c9b7]"></div>
+    </div>
+    
+    <!-- Buttons with consistent styling -->
+    <div class="flex justify-center gap-4 mt-8">
+      <a href="https://www.meetup.com/amazon-web-services-aws-vienna/" target="_blank" rel="noopener noreferrer" class="reinvent-button px-6 py-2 hover-scale shimmer-effect">
+        Join our Meetup
+      </a>
+      <a href="#events" class="reinvent-button-secondary px-6 py-2 hover-scale">
+        Upcoming Events
+      </a>
+    </div>
+    
+    <!-- User Group Cards with consistent styling -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+      <!-- Vienna -->
+      <div class="reinvent-card p-px reveal-animation hover-scale shimmer-effect">
+        <div class="p-6 h-full flex flex-col items-center text-center">
+          <img src="/images/AWSUserGroupVienna.png" alt="AWS User Group Vienna" class="w-16 h-16 mb-4">
+          <h3 class="text-xl font-bold mb-2">AWS User Group Vienna</h3>
+          <p class="text-gray-300 mb-4">Monthly meetups with AWS experts and enthusiasts in Vienna.</p>
+          <a href="https://www.meetup.com/amazon-web-services-aws-vienna/" target="_blank" rel="noopener noreferrer" class="reinvent-button-secondary px-4 py-2 text-sm mt-auto">
+            Join Group
+          </a>
+        </div>
+      </div>
+      
+      <!-- Women's UG -->
+      <div class="reinvent-card p-px reveal-animation hover-scale shimmer-effect" style="animation-delay: 0.2s">
+        <div class="p-6 h-full flex flex-col items-center text-center">
+          <img src="/images/AWSWomensUserGroupVienna.png" alt="AWS Women's User Group Vienna" class="w-16 h-16 mb-4">
+          <h3 class="text-xl font-bold mb-2">AWS Women's User Group Vienna</h3>
+          <p class="text-gray-300 mb-4">Quarterly events focused on diversity and inclusion in tech.</p>
+          <a href="https://www.meetup.com/aws-womens-user-group-vienna/" target="_blank" rel="noopener noreferrer" class="reinvent-button-secondary px-4 py-2 text-sm mt-auto">
+            Join Group
+          </a>
+        </div>
+      </div>
+      
+      <!-- Linz -->
+      <div class="reinvent-card p-px reveal-animation hover-scale shimmer-effect" style="animation-delay: 0.4s">
+        <div class="p-6 h-full flex flex-col items-center text-center">
+          <img src="/images/AWSUserGroupLinz.png" alt="AWS User Group Linz" class="w-16 h-16 mb-4">
+          <h3 class="text-xl font-bold mb-2">AWS User Group Linz</h3>
+          <p class="text-gray-300 mb-4">AWS community events in Linz for cloud professionals.</p>
+          <a href="https://www.meetup.com/aws-user-group-linz/" target="_blank" rel="noopener noreferrer" class="reinvent-button-secondary px-4 py-2 text-sm mt-auto">
+            Join Group
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Features Section -->
+    <div class="mt-24">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold gradient-text">What We Offer</h2>
+        <div class="w-16 h-1 mx-auto mt-2 mb-6 bg-gradient-to-r from-[#6f42c1] via-[#0070f3] to-[#00c9b7]"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="reinvent-card-highlight relative group reveal-animation hover-scale shimmer-effect">
+          <div class="p-6 h-full">
+            <div class="reinvent-icon-container mb-4">
+              <svg class="w-6 h-6 text-[#8A2BE2]" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 005 10a6 6 0 0012 0c0-.352-.035-.696-.1-1.028A5 5 0 0010 11z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Expert Speakers</h3>
+            <p class="text-gray-300">Learn from AWS Heroes, Community Builders, and industry experts sharing their knowledge and experiences.</p>
+            <div class="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <svg class="w-6 h-6 text-[#8A2BE2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="reinvent-card-highlight relative group reveal-animation hover-scale shimmer-effect" style="animation-delay: 0.2s">
+          <div class="p-6 h-full">
+            <div class="reinvent-icon-container mb-4">
+              <svg class="w-6 h-6 text-[#8A2BE2]" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Networking</h3>
+            <p class="text-gray-300">Connect with fellow AWS enthusiasts, share experiences, and build valuable professional relationships.</p>
+            <div class="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <svg class="w-6 h-6 text-[#8A2BE2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="reinvent-card-highlight relative group reveal-animation hover-scale shimmer-effect" style="animation-delay: 0.4s">
+          <div class="p-6 h-full">
+            <div class="reinvent-icon-container mb-4">
+              <svg class="w-6 h-6 text-[#8A2BE2]" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Workshops</h3>
+            <p class="text-gray-300">Participate in hands-on workshops to develop practical skills with AWS services and technologies.</p>
+            <div class="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <svg class="w-6 h-6 text-[#8A2BE2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Upcoming Events Section -->
+    <div class="mt-24" id="events">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold gradient-text">Upcoming Events</h2>
+        <div class="w-16 h-1 mx-auto mt-2 mb-6 bg-gradient-to-r from-[#6f42c1] via-[#0070f3] to-[#00c9b7]"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Event 1 -->
+        <div class="reinvent-card-highlight relative group reveal-animation hover-scale shimmer-effect">
+          <div class="bg-[#8A2BE2]/20 p-4">
+            <div class="flex justify-between items-center">
+              <div>
+                <span class="text-sm text-gray-300">June 15, 2025</span>
+                <h3 class="text-xl font-bold">AWS User Group Vienna #46</h3>
+              </div>
+              <span class="bg-[#8A2BE2]/30 text-white text-xs px-3 py-1 rounded-full">Vienna</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-300 mb-4">Join us for an evening of AWS knowledge sharing and networking. We'll have talks on serverless architecture and container security.</p>
+            <div class="flex items-center text-sm text-gray-300 mb-4">
+              <svg class="w-5 h-5 text-[#8A2BE2] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+              <span>AWS Office Vienna</span>
+            </div>
+            <a href="#" class="reinvent-button-secondary px-4 py-2 text-sm inline-block hover-scale">RSVP on Meetup</a>
+            <div class="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <svg class="w-6 h-6 text-[#8A2BE2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Event 2 -->
+        <div class="reinvent-card-highlight relative group reveal-animation hover-scale shimmer-effect" style="animation-delay: 0.2s">
+          <div class="bg-[#8A2BE2]/20 p-4">
+            <div class="flex justify-between items-center">
+              <div>
+                <span class="text-sm text-gray-300">July 10, 2025</span>
+                <h3 class="text-xl font-bold">AWS Women's User Group #3</h3>
+              </div>
+              <span class="bg-[#8A2BE2]/30 text-white text-xs px-3 py-1 rounded-full">Vienna</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-300 mb-4">A special event focused on diversity in tech and cloud computing. Join us for inspiring talks and networking opportunities.</p>
+            <div class="flex items-center text-sm text-gray-300 mb-4">
+              <svg class="w-5 h-5 text-[#8A2BE2] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Dynatrace Office Vienna</span>
+            </div>
+            <a href="#" class="reinvent-button-secondary px-4 py-2 text-sm inline-block hover-scale">RSVP on Meetup</a>
+            <div class="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <svg class="w-6 h-6 text-[#8A2BE2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <a href="https://www.meetup.com/amazon-web-services-aws-vienna/events/" target="_blank" rel="noopener noreferrer" class="reinvent-button px-6 py-2 hover-scale shimmer-effect">
+          View All Events
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

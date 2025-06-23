@@ -1,0 +1,167 @@
+<header class="site-header py-5 relative z-20">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <a href="{{ "/" | absURL }}" class="flex items-center">
+                <img src="/images/AWSUserGroupsAustria.png" alt="AWS User Groups Austria" class="h-6 mr-3">
+                <span class="text-2xl font-bold gradient-text">AWS User Groups Austria</span>
+            </a>
+            
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-8 items-center">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="header-nav-link {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a>
+                {{ end }}
+                
+                <!-- User Groups Dropdown -->
+                <div class="relative" x-data="{ open: false }">
+                    <button @click="open = !open" @click.away="open = false" class="reinvent-button-secondary px-4 py-2 rounded-md flex items-center text-sm">
+                        User Groups
+                        <svg class="w-4 h-4 ml-1" :class="{'rotate-180': open}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div x-show="open" 
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 translate-y-1"
+                         x-transition:enter-end="opacity-100 translate-y-0"
+                         x-transition:leave="transition ease-in duration-150"
+                         x-transition:leave-start="opacity-100 translate-y-0"
+                         x-transition:leave-end="opacity-0 translate-y-1"
+                         class="absolute left-0 mt-2 w-80 rounded-md shadow-lg dropdown-menu z-50"
+                         style="display: none;">
+                        <div class="py-2">
+                            <a href="https://www.meetup.com/amazon-web-services-aws-vienna/" class="dropdown-item">
+                                <img src="/images/AWSUserGroupVienna.png" alt="AWS User Group Vienna" class="w-5 h-5 mr-2 rounded-full">
+                                <div>
+                                    <span class="block font-medium">AWS User Group Vienna</span>
+                                    <span class="block text-xs text-gray-500">Monthly meetups in Vienna</span>
+                                </div>
+                            </a>
+                            <a href="https://www.meetup.com/aws-womens-user-group-vienna/" class="dropdown-item">
+                                <img src="/images/AWSWomensUserGroupVienna.png" alt="AWS Women's User Group Vienna" class="w-5 h-5 mr-2 rounded-full">
+                                <div>
+                                    <span class="block font-medium">AWS Women's User Group Vienna</span>
+                                    <span class="block text-xs text-gray-500">Quarterly events in Vienna</span>
+                                </div>
+                            </a>
+                            <a href="https://www.meetup.com/aws-user-group-linz/" class="dropdown-item">
+                                <img src="/images/AWSUserGroupLinz.png" alt="AWS User Group Linz" class="w-5 h-5 mr-2 rounded-full">
+                                <div>
+                                    <span class="block font-medium">AWS User Group Linz</span>
+                                    <span class="block text-xs text-gray-500">Events in Linz</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Resources Dropdown -->
+                <div class="relative" x-data="{ open: false }">
+                    <button @click="open = !open" @click.away="open = false" class="reinvent-button-secondary px-4 py-2 rounded-md flex items-center text-sm">
+                        Resources
+                        <svg class="w-4 h-4 ml-1" :class="{'rotate-180': open}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div x-show="open" 
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 translate-y-1"
+                         x-transition:enter-end="opacity-100 translate-y-0"
+                         x-transition:leave="transition ease-in duration-150"
+                         x-transition:leave-start="opacity-100 translate-y-0"
+                         x-transition:leave-end="opacity-0 translate-y-1"
+                         class="absolute right-0 mt-2 w-80 rounded-md shadow-lg dropdown-menu z-50"
+                         style="display: none;">
+                        <div class="py-2">
+                            <a href="https://drive.google.com/file/d/1c0GqUhp8kFLHAIOGp4LSbKKwath6ZXcV/view?usp=sharing" target="_blank" class="dropdown-item">
+                                <div class="dropdown-icon">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="block font-medium">Meetup Prep Guide</span>
+                                    <span class="block text-xs text-gray-500">Download PDF Guide</span>
+                                </div>
+                            </a>
+                            <a href="https://sessionize.com/aws-community-austria/" target="_blank" class="dropdown-item">
+                                <div class="dropdown-icon">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="block font-medium">Submit a Talk</span>
+                                    <span class="block text-xs text-gray-500">Sessionize - AWS Community Austria</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="https://github.com/aws-user-group-vienna" class="reinvent-button-secondary px-4 py-2 rounded-md flex items-center text-sm">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                    </svg>
+                    GitHub
+                </a>
+            </nav>
+            
+            <!-- Mobile menu button -->
+            <button class="md:hidden text-gray-800 focus:outline-none" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden mt-4 p-4 reinvent-card" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="text-gray-800 hover:text-[#8A2BE2]">{{ .Name }}</a>
+                {{ end }}
+                <div class="py-1 border-t border-[#8A2BE2]/20 my-2"></div>
+                <span class="text-sm font-medium text-gray-600">User Groups</span>
+                <a href="https://www.meetup.com/amazon-web-services-aws-vienna/" class="text-gray-800 hover:text-[#8A2BE2] flex items-center pl-2">
+                    <img src="/images/AWSUserGroupVienna.png" alt="AWS User Group Vienna" class="w-5 h-5 mr-2 rounded-full">
+                    <span>AWS User Group Vienna</span>
+                </a>
+                <a href="https://www.meetup.com/aws-womens-user-group-vienna/" class="text-gray-800 hover:text-[#8A2BE2] flex items-center pl-2">
+                    <img src="/images/AWSWomensUserGroupVienna.png" alt="AWS Women's User Group Vienna" class="w-5 h-5 mr-2 rounded-full">
+                    <span>AWS Women's User Group Vienna</span>
+                </a>
+                <a href="https://www.meetup.com/aws-user-group-linz/" class="text-gray-800 hover:text-[#8A2BE2] flex items-center pl-2">
+                    <img src="/images/AWSUserGroupLinz.png" alt="AWS User Group Linz" class="w-5 h-5 mr-2 rounded-full">
+                    <span>AWS User Group Linz</span>
+                </a>
+                <div class="py-1 border-t border-[#8A2BE2]/20 my-2"></div>
+                <span class="text-sm font-medium text-gray-600">Resources</span>
+                <a href="https://drive.google.com/file/d/1c0GqUhp8kFLHAIOGp4LSbKKwath6ZXcV/view?usp=sharing" target="_blank" class="text-gray-800 hover:text-[#8A2BE2] flex items-center pl-2">
+                    <svg class="w-5 h-5 text-[#8A2BE2] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Meetup Prep Guide</span>
+                </a>
+                <a href="https://sessionize.com/aws-community-austria/" target="_blank" class="text-gray-800 hover:text-[#8A2BE2] flex items-center pl-2">
+                    <svg class="w-5 h-5 text-[#8A2BE2] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Submit a Talk</span>
+                </a>
+                <div class="py-1 border-t border-[#8A2BE2]/20 my-2"></div>
+                <a href="https://github.com/aws-user-group-vienna" class="text-gray-800 hover:text-[#8A2BE2] flex items-center">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Decorative bottom border with gradient -->
+    <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#6A5ACD] to-transparent"></div>
+</header>

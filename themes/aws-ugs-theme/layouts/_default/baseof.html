@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ "images/favicon.png" | absURL }}">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
+    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    {{ with .Site.Params.images }}{{ range first 1 . }}
+    <meta property="og:image" content="{{ . | absURL }}">
+    {{ end }}{{ end }}
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ "css/complete-styles.css" | absURL }}">
+    
+    <!-- Alpine.js for dropdowns -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <!-- Background elements -->
+    <div class="reinvent-grid"></div>
+    <div class="reinvent-glow">
+        <div class="glow-circle glow-circle-1"></div>
+        <div class="glow-circle glow-circle-2"></div>
+        <div class="glow-circle glow-circle-3"></div>
+    </div>
+    <div class="decorative-line top-[20%]"></div>
+    <div class="decorative-line top-[80%]"></div>
+    
+    <!-- Hexagon background -->
+    <div class="fixed inset-0 z-0 opacity-10 pointer-events-none">
+        <div class="absolute inset-0" style="background-image: url('/images/hexagon-pattern.svg'); background-size: 200px; background-repeat: repeat;"></div>
+    </div>
+    
+    {{ partial "header.html" . }}
+    
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    
+    {{ partial "footer.html" . }}
+    
+    <!-- JavaScript -->
+    <script src="{{ "js/main.js" | absURL }}"></script>
+</body>
+</html>

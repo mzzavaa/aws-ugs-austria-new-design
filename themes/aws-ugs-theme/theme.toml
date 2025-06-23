@@ -1,0 +1,12 @@
+name = "AWS User Groups Austria Theme"
+license = "MIT"
+licenselink = "https://github.com/aws-user-group-vienna/aws-ugs-austria-theme/blob/main/LICENSE"
+description = "A modern theme for AWS User Groups Austria"
+homepage = "https://github.com/aws-user-group-vienna/aws-ugs-austria-theme"
+tags = ["aws", "user-group", "community", "responsive", "dark"]
+features = ["responsive", "dark mode", "modern"]
+min_version = "0.41.0"
+
+[author]
+  name = "Linda Mohamed"
+  homepage = "https://www.linkedin.com/in/lindamohamed/"

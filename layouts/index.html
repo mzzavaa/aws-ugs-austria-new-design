@@ -1,0 +1,140 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="py-24 md:py-36 relative">
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center mb-12">
+      <h1 class="text-5xl md:text-7xl font-bold mb-4 text-glow gradient-text">AWS User Groups Austria</h1>
+      <p class="text-xl mb-6">A community for AWS enthusiasts in Austria</p>
+      <div class="w-24 h-1 mx-auto bg-gradient-to-r from-[#8A2BE2] via-[#6A5ACD] to-[#0047AB]"></div>
+    </div>
+    
+    <!-- Buttons with consistent styling -->
+    <div class="flex justify-center gap-4 mt-8">
+      <a href="https://www.meetup.com/amazon-web-services-aws-vienna/" target="_blank" rel="noopener noreferrer" class="reinvent-button px-4 py-2 hover-scale">
+        Join our Meetup
+      </a>
+      <a href="#events" class="reinvent-button-secondary px-4 py-2 hover-scale">
+        Upcoming Events
+      </a>
+    </div>
+    
+    <!-- User Group Cards with consistent styling -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+      <!-- Vienna -->
+      <div class="reinvent-card p-px reveal-animation hover-scale">
+        <div class="p-6 flex flex-col items-center text-center h-full">
+          <img src="/images/AWSUserGroupVienna.png" alt="AWS User Group Vienna" class="w-16 h-16 mb-4">
+          <h3 class="text-xl font-bold mb-2">AWS User Group Vienna</h3>
+          <p class="text-gray-300 mb-4">Monthly meetups with AWS experts and enthusiasts in Vienna.</p>
+          <a href="https://www.meetup.com/amazon-web-services-aws-vienna/" target="_blank" rel="noopener noreferrer" class="reinvent-button-secondary px-4 py-2 text-sm mt-auto">
+            Join Group
+          </a>
+        </div>
+      </div>
+      
+      <!-- Women's UG -->
+      <div class="reinvent-card p-px reveal-animation hover-scale">
+        <div class="p-6 flex flex-col items-center text-center h-full">
+          <img src="/images/AWSWomensUserGroupVienna.png" alt="AWS Women's User Group Vienna" class="w-16 h-16 mb-4">
+          <h3 class="text-xl font-bold mb-2">AWS Women's User Group Vienna</h3>
+          <p class="text-gray-300 mb-4">Quarterly events focused on diversity and inclusion in tech.</p>
+          <a href="https://www.meetup.com/aws-womens-user-group-vienna/" target="_blank" rel="noopener noreferrer" class="reinvent-button-secondary px-4 py-2 text-sm mt-auto">
+            Join Group
+          </a>
+        </div>
+      </div>
+      
+      <!-- Linz -->
+      <div class="reinvent-card p-px reveal-animation hover-scale">
+        <div class="p-6 flex flex-col items-center text-center h-full">
+          <img src="/images/AWSUserGroupLinz.png" alt="AWS User Group Linz" class="w-16 h-16 mb-4">
+          <h3 class="text-xl font-bold mb-2">AWS User Group Linz</h3>
+          <p class="text-gray-300 mb-4">AWS community in Upper Austria connecting cloud enthusiasts.</p>
+          <a href="https://www.meetup.com/aws-user-group-linz/" target="_blank" rel="noopener noreferrer" class="reinvent-button-secondary px-4 py-2 text-sm mt-auto">
+            Join Group
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Events Section -->
+<section id="events" class="py-16 bg-gray-900">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12">Upcoming Events</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Sample Event Card -->
+      <div class="reinvent-card p-px reveal-animation hover-scale">
+        <div class="p-6 flex flex-col h-full">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-xl font-bold mb-2">AWS re:Invent 2024 Recap</h3>
+              <p class="text-blue-400 text-sm">AWS User Group Vienna</p>
+            </div>
+            <span class="px-2 py-1 text-xs rounded-full bg-orange-600 text-white">AWS</span>
+          </div>
+          
+          <p class="text-gray-300 mb-4 flex-grow">Join us for a comprehensive recap of AWS re:Invent 2024 announcements and key takeaways.</p>
+          
+          <div class="space-y-2 mb-4 text-sm text-gray-400">
+            <div class="flex items-center gap-2">
+              <span>📅</span>
+              <span>January 15, 2025 at 18:00</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span>📍</span>
+              <span>TechHub Vienna</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span>👥</span>
+              <span>45/80 registered</span>
+            </div>
+          </div>
+          
+          <a href="https://www.meetup.com/amazon-web-services-aws-vienna/" target="_blank" rel="noopener noreferrer" 
+             class="reinvent-button px-4 py-2 text-sm text-center mt-auto">
+            Register Now
+          </a>
+        </div>
+      </div>
+      
+      <!-- Add more event cards as needed -->
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-8">About AWS User Groups Austria</h2>
+      <p class="text-xl text-gray-300 mb-8">
+        We are a community of AWS enthusiasts, professionals, and learners across Austria. 
+        Our mission is to foster knowledge sharing, networking, and professional growth in the AWS ecosystem.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div class="text-center">
+          <div class="text-4xl mb-4">🎯</div>
+          <h3 class="text-xl font-bold mb-2">Learn</h3>
+          <p class="text-gray-300">Stay updated with the latest AWS services, best practices, and industry trends.</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="text-4xl mb-4">🤝</div>
+          <h3 class="text-xl font-bold mb-2">Connect</h3>
+          <p class="text-gray-300">Network with fellow AWS professionals and build lasting relationships.</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="text-4xl mb-4">🚀</div>
+          <h3 class="text-xl font-bold mb-2">Grow</h3>
+          <p class="text-gray-300">Advance your career and contribute to the AWS community in Austria.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

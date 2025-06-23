@@ -1,0 +1,89 @@
+/* Main styles for AWS User Groups Austria */
+
+/* Background */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f4f8, #e1e8f0, #f0e6f6);
+  background-attachment: fixed;
+}
+
+/* Cards */
+.reinvent-card {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: rgba(245, 245, 250, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  transition: all 0.3s ease;
+  color: #121212;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.08);
+}
+
+.reinvent-card.p-px {
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.6), rgba(106, 90, 205, 0.4), rgba(0, 71, 171, 0.4));
+}
+
+.reinvent-card.p-px > div {
+  border-radius: 0.7rem;
+  background-color: rgba(245, 245, 250, 0.95);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.reinvent-card:hover {
+  border-color: rgba(138, 43, 226, 0.4);
+  box-shadow: 0 8px 24px rgba(138, 43, 226, 0.15);
+  transform: translateY(-5px);
+}
+
+.reinvent-card-highlight {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: rgba(245, 245, 250, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  transition: all 0.3s ease;
+  color: #121212;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.08);
+}
+
+.reinvent-card-highlight:hover {
+  border-color: rgba(138, 43, 226, 0.4);
+  box-shadow: 0 8px 24px rgba(138, 43, 226, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Animations */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: translateY(-5px);
+}
+
+.reveal-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Container */
+.container {
+  max-width: 1500px !important;
+}

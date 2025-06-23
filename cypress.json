@@ -1,0 +1,8 @@
+{
+  "baseUrl": "http://localhost:1313",
+  "viewportWidth": 1280,
+  "viewportHeight": 800,
+  "video": false,
+  "screenshotOnRunFailure": true,
+  "integrationFolder": "tests"
+}
